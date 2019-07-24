@@ -14,12 +14,6 @@
 npm install -s ele-vue
 ```
 
-## Author
-
-👤 **sillyy**
-
-* Github: [@sillyy](https://github.com/sillyy)
-
 ## Show your support
 
 Give a ⭐️ if this project helped you!
