@@ -1,11 +1,9 @@
 <template>
   <div id="app">
-    <router-view/>
+    <h1>Ele-Vue</h1>
   </div>
 </template>
 <script>
-import './assets/style/reset.css'
-import './assets/style/style.css'
 export default {
   name: 'app'
 }

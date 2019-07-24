@@ -92,32 +92,6 @@ export default {
       return this.list && this.curPage > 0 ? false : true;
     }
   },
-  data() {
-    return {
-      tableData: [
-        {
-          date: '2016-05-02',
-          name: '王小虎',
-          address: '上海市普陀区金沙江路 1518 弄'
-        },
-        {
-          date: '2016-05-04',
-          name: '王小虎',
-          address: '上海市普陀区金沙江路 1517 弄'
-        },
-        {
-          date: '2016-05-01',
-          name: '王小虎',
-          address: '上海市普陀区金沙江路 1519 弄'
-        },
-        {
-          date: '2016-05-03',
-          name: '王小虎',
-          address: '上海市普陀区金沙江路 1516 弄'
-        }
-      ]
-    };
-  },
   methods: {
     indexMethod(idx) {
       return (this.curPage - 1) * this.pageSize + idx + 1;
