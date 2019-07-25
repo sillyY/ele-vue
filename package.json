@@ -1,33 +1,15 @@
 {
-  "name": "ele-vue",
-  "version": "0.1.5",
-  "description": "基于 Element-UI 开发的小型组件库",
-  "private": false,
-  "main": "lib/ele-vue.umd.min.js",
-  "keywords": [
-    "vue",
-    "Element-UI",
-    "Table"
-  ],
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
-    "lib": "vue-cli-service build --target lib --name ele-vue --dest lib packages/index.js"
-  },
-  "dependencies": {
-    "core-js": "^2.6.5"
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs",
+    "deploy": "sh deploy.sh"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.9.0",
-    "@vue/cli-plugin-eslint": "^3.9.0",
-    "@vue/cli-service": "^3.9.0",
-    "babel-eslint": "^10.0.1",
+    "vuepress": "^0.14.11"
+  },
+  "dependencies": {
+    "ele-vue": "^0.1.5",
     "element-ui": "^2.10.1",
-    "eslint": "^5.16.0",
-    "eslint-plugin-vue": "^5.0.0",
-    "vue": "^2.6.10",
-    "vue-template-compiler": "^2.6.10",
-    "webpack-chain": "^6.0.0"
+    "vue": "^2.6.10"
   }
 }
