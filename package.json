@@ -13,7 +13,9 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "lib": "vue-cli-service build --target lib --name ele-vue --dest lib packages/index.js"
+    "lib": "vue-cli-service build --target lib --name ele-vue --dest lib packages/index.js",
+    "docs": "vuepress dev docs",
+    "deploy": ""
   },
   "dependencies": {
     "core-js": "^2.6.5"
@@ -28,6 +30,8 @@
     "eslint-plugin-vue": "^5.0.0",
     "vue": "^2.6.10",
     "vue-template-compiler": "^2.6.10",
+    "vuepress": "^1.0.2",
+    "vuepress-plugin-demo-block": "^0.7.2",
     "webpack-chain": "^6.0.0"
   }
 }
