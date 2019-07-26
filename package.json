@@ -5,11 +5,10 @@
     "deploy": "sh deploy.sh"
   },
   "devDependencies": {
-    "vuepress": "^0.14.11"
-  },
-  "dependencies": {
-    "ele-vue": "^0.1.5",
-    "element-ui": "^2.10.1",
-    "vue": "^2.6.10"
+    "ele-vue": "^0.1.7",
+    "element-ui": "^2.11.0",
+    "vue": "^2.6.10",
+    "vuepress": "^1.0.2",
+    "vuepress-plugin-demo-block": "^0.7.2"
   }
 }
