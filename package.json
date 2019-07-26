@@ -31,7 +31,7 @@
     "vue": "^2.6.10",
     "vue-template-compiler": "^2.6.10",
     "vuepress": "^1.0.2",
-    "vuepress-plugin-demo-block": "^0.7.2",
+    "vuepress-plugin-demo-code": "^0.3.5",
     "webpack-chain": "^6.0.0"
   }
 }
