@@ -3,7 +3,9 @@
  */
 import Element from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
-// import EleVue from 'https://cdn.jsdelivr.net/npm/ele-vue/lib/ele-vue.umd.min.js'
+import EleVue from '../../packages/index'
+
+import '../.vuepress/public/style/reset.css'
 
 export default ({
   Vue, // VuePress 正在使用的 Vue 构造函数
@@ -13,5 +15,5 @@ export default ({
 }) => {
   // ...做一些其他的应用级别的优化
   Vue.use(Element)
-  // Vue.use(EleVue)
+  Vue.use(EleVue)
 }

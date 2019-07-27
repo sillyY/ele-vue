@@ -89,6 +89,7 @@ export default {
   },
   computed: {
     loading() {
+      if(!this.layout.isLoading) return false
       return this.list && this.curPage > 0 ? false : true;
     }
   },
