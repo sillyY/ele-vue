@@ -1,13 +1,18 @@
 <template>
   <el-table
-    :data='list'
     v-loading='loading'
-    :border='layout.isBorder? false: true '
+    :data='list'
+    :border='layout.border'
+    :stripe='layout.stripe'
+    :row-class-name='layout.rowClassName'
+    :style='layout.style'
+    height='layout.height'
+    max-height='layout.maxHeight'
     @selection-change='handleSelectionChange'
-    size='medium'
+    :size="layout.size?layout.size: 'medium'"
   >
     <!-- selection -->
-    <el-table-column v-if='layout.isSelect ? true: false' type='selection'></el-table-column>
+    <el-table-column v-if='layout.select' type='selection'></el-table-column>
     <!-- index -->
     <el-table-column
       type='index'
@@ -15,18 +20,18 @@
       label='序号'
       align='center'
       width='80px'
-      v-if='layout.isOrder? true : false'
+      v-if='layout.index? true : false'
     />
     <!-- handle -->
     <el-table-column
       fixed='right'
       label='操作'
       align='center'
-      :width='layout.operateOption && layout.operateOptions.width ? layout.operateOptions.width : 100'
-      v-if='layout.hasOperate? true: false'
+      :width='layout.operate && layout.operate.width ? layout.operate.width : 100'
+      v-if='layout.operate && layout.operate.visible'
     >
       <template slot-scope='scope'>
-        <slot :props='scope' name='handle'></slot>
+        <slot :slot='scope' name='operate'></slot>
       </template>
     </el-table-column>
 
@@ -36,13 +41,14 @@
       :key='cid'
       :prop='col.attr'
       :label='col.name'
-      :sortable='col.sortable'
-      align='center'
+      :sortable='col.sortable ?true: false'
       :width='col.width'
+      :fixed='col.fixed'
+      :align="col.align?col.align:'center'"
     >
       <template slot-scope='scope'>
         <el-row v-if='col.slot'>
-          <slot :props='scope' :name='col.slot'></slot>
+          <slot :slot='scope' :name='col.slot'></slot>
         </el-row>
         <el-row v-else>{{scope.row[col.attr]}}</el-row>
       </template>
@@ -60,11 +66,10 @@ export default {
       },
       required: true
     },
-
     curPage: {
       type: Number,
       default() {
-        return 0; // 设为0用于监听loading
+        return 1; // 设为0用于监听loading
       }
     },
     pageSize: {
@@ -89,8 +94,7 @@ export default {
   },
   computed: {
     loading() {
-      if(!this.layout.isLoading) return false
-      return this.list && this.curPage > 0 ? false : true;
+      return this.list && this.list.length ? false : true;
     }
   },
   methods: {

@@ -16,73 +16,71 @@ npm install -s ele-vue
 
 ## Components
 
-- Table
+### Table
+
+- Attr:
 
 ```
-<template>
-  <div class='First'>
-    <Table :layout='layout' :list='tableData' :curPage='1' />
-  </div>
-</template>
-<script>
-export default {
-  name: 'TableView',
-  data() {
-    return {
-      layout: {
-        isOrder: false, 
-        isSelected: false, 
-        props: [
-          {
-            attr: 'date',
-            name: '日期'
-          },
-          {
-            attr: 'name',
-            name: '姓名'
-          },
-          {
-            attr: 'address',
-            name: '地址'
-          }
-        ],
-        hasOperate: false
-      },
-      tableData: [
-        {
-          date: '2016-05-02',
-          name: '王小虎',
-          address: '上海市普陀区金沙江路 1518 弄'
-        },
-        {
-          date: '2016-05-04',
-          name: '王小虎',
-          address: '上海市普陀区金沙江路 1517 弄'
-        },
-        {
-          date: '2016-05-01',
-          name: '王小虎',
-          address: '上海市普陀区金沙江路 1519 弄'
-        },
-        {
-          date: '2016-05-03',
-          name: '王小虎',
-          address: '上海市普陀区金沙江路 1516 弄'
-        }
-      ]
-    };
+indexMethod: Function // 自定义索引
+handleSelectionChange: Function // 多选选中
+layout: {
+  border: Booean, // 边框
+  stripe: Booean, // 斑马纹
+  rowClassName: String //带状态表格
+  style: String // 样式
+  height: String // 高度
+  maxHeight: String // 最大高度
+  select: Boolean, // 多选
+  index: Boolean // 索引
+  size: String // 大小,
+  operate: { // 操作区
+    visible: Boolean // 显隐
+    width: Stirng, // 宽度
   }
-};
-</script>
+  props: [
+    {
+      attr: String // 属性
+      name: String // 名称
+      sortable: Boolean // 排序
+      width: String //宽度
+      fixed: String, Boolean // 固定在左侧或右侧
+      align: String // 对齐方式
+      slot: String // 插槽名
+    },
+  ]
+},
+list: Array // 数据
+```
+
+- 操作
+
+```
+// 操作区演示
+<Table> // 省略属性
+  <template v-slot:operate='scope'>
+    <el-button>{{scope.slot.row.name}}</el-button>
+  </template>
+</Table>
+```
+
+- 普通
+
+```
+<Table> // 省略属性
+  <template v-slot:address='scope'>
+    {{scope.slot.row.address}}
+  </template>
+</Table>
 ```
 
 ## Next to do
- - Docs ❗️❗️❗️
- - Pagination
- - Upload
- - Download
- - QRCode
- - More...
+
+- Docs ❗️❗️❗️
+- Pagination
+- Upload
+- Download
+- QRCode
+- More...
 
 ## Show your support
 
