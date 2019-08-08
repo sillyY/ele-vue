@@ -18,6 +18,7 @@ npm install -s ele-vue
 
 ### Table
 由于便利性开发的缘故，暂时不能完全支持Element-UI的全部功能，见谅！
+> 仅支持Vue2.6.0+ 
 
 - Attr:
 

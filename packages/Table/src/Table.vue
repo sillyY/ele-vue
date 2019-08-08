@@ -95,18 +95,11 @@ export default {
   computed: {
     loading() {
       return this.list && this.list.length ? false : true;
-    },
-    slot(val) {
-      console.log(val)
-      return val
     }
   },
   methods: {
     indexMethod(idx) {
       return (this.curPage - 1) * this.pageSize + idx + 1;
-    },
-    parse(val) {
-      console.log(val)
     }
   }
 };
