@@ -31,7 +31,7 @@
       v-if='layout.operate && layout.operate.visible'
     >
       <template slot-scope='scope'>
-        <slot :slot='scope' name='operate'></slot>
+        <slot :scope='scope' name='operate'></slot>
       </template>
     </el-table-column>
 
@@ -48,7 +48,7 @@
     >
       <template slot-scope='scope'>
         <el-row v-if='col.slot'>
-          <slot :slot='scope' :name='col.slot'></slot>
+          <slot :scope='scope' :name='col.slot'></slot>
         </el-row>
         <el-row v-else>{{scope.row[col.attr]}}</el-row>
       </template>
@@ -95,11 +95,18 @@ export default {
   computed: {
     loading() {
       return this.list && this.list.length ? false : true;
+    },
+    slot(val) {
+      console.log(val)
+      return val
     }
   },
   methods: {
     indexMethod(idx) {
       return (this.curPage - 1) * this.pageSize + idx + 1;
+    },
+    parse(val) {
+      console.log(val)
     }
   }
 };

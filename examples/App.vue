@@ -3,10 +3,10 @@
     <h1>Ele-Vue</h1>
     <el-button @click='setList'>111</el-button>
     <Table :layout='layout' :list='list'>
-      <!-- <template v-slot:address='scope' >
-        {{scope.slot.row.address}}
-      </template> -->
-      <template v-slot:operate v-slot:default="scope">
+      <template #address="{scope}" >
+        {{scope.row.address}}
+      </template>
+      <template #operate="{scope}">
         <el-button @click="handleScope(scope)">编辑</el-button>
       </template>
     </Table>
@@ -37,17 +37,11 @@ export default {
           {
             attr: 'address',
             name: '地址',
-            // slot: 'address'
+            slot: 'address'
           },
         ]
       },
-      list: []
-    };
-  },
-  methods: {
-    setList() {
-      this.list = [
-        {
+      list: [ {
           date: '2016-05-02',
           name: '王小虎',
           address: '上海市普陀区金沙江路 1518 弄'
@@ -66,7 +60,13 @@ export default {
           date: '2016-05-03',
           name: '王小虎',
           address: '上海市普陀区金沙江路 1516 弄'
-        }
+        }]
+    };
+  },
+  methods: {
+    setList() {
+      this.list = [
+       
       ];
     },
     handleScope(v) {

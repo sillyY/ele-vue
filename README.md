@@ -17,6 +17,7 @@ npm install -s ele-vue
 ## Components
 
 ### Table
+由于便利性开发的缘故，暂时不能完全支持Element-UI的全部功能，见谅！
 
 - Attr:
 
@@ -57,8 +58,8 @@ list: Array // 数据
 ```
 // 操作区演示
 <Table> // 省略属性
-  <template v-slot:operate='scope'>
-    <el-button>{{scope.slot.row.name}}</el-button>
+  <template #operate='{scope}'>
+    <el-button @click="handleClick(scope)">编辑</el-button>
   </template>
 </Table>
 ```
@@ -67,15 +68,13 @@ list: Array // 数据
 
 ```
 <Table> // 省略属性
-  <template v-slot:address='scope'>
-    {{scope.slot.row.address}}
+  <template #address='{scope}'>
+    {{scope.row.address}}
   </template>
 </Table>
 ```
 
 ## Next to do
-
-- Docs ❗️❗️❗️
 - Pagination
 - Upload
 - Download
