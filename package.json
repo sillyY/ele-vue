@@ -1,6 +1,6 @@
 {
   "name": "ele-vue",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "基于 Element-UI 开发的小型组件库",
   "private": false,
   "main": "lib/ele-vue.umd.min.js",
