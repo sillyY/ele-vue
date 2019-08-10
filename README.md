@@ -54,7 +54,7 @@ layout: {
 list: Array // 数据
 ```
 
-- 操作
+- Usage
 
 ```
 // 操作区演示
@@ -65,9 +65,8 @@ list: Array // 数据
 </Table>
 ```
 
-- 普通
-
 ```
+// 普通值展示
 <Table> // 省略属性
   <template #address='{scope}'>
     {{scope.row.address}}
@@ -75,11 +74,35 @@ list: Array // 数据
 </Table>
 ```
 
+### Page
+- Attr:
+```
+layout: String // 组件布局
+total: Number // 总条目数 
+pageSize: Number // 每页显示条数
+pageSizes: Number[] // 每页显示个数选择器的选项设置
+currentPage: Number // 当前页
+sizeCb: Function // pageSize 改变时会触发
+pageCb: Function // currentPage 改变时会触发
+```
+
+- Usage
+```
+<Page
+  :total='page.total'
+  :pageSize='page.pageSize'
+  :currentPage='page.currentPage'
+  :sizeCb='handleSizeCb'
+  :pageCb='handlePageCb'
+/>
+```
+
 ## Next to do
-- Pagination
 - Upload
 - Download
 - QRCode
+- Directive
+- Useful function
 - More...
 
 ## Show your support

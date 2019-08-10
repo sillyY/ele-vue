@@ -8,7 +8,7 @@
     :page-size='pageSize'
     :layout='layout'
     :total='total'
-    v-if='total>0' />
+    :hide-on-single-page="total == 0" />
 </template>
 <script>
 export default {
@@ -26,6 +26,12 @@ export default {
             type: Number,
             default: 20
         },
+        pageSizes: {
+            type: Array,
+            default() {
+                return [10, 20 ,30]
+            }
+        },
         currentPage: {
             type: Number,
             default: 1
@@ -42,6 +48,6 @@ export default {
                 return function() {}
             }
         }
-    }
+    },
 }
 </script>

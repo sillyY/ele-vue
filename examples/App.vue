@@ -3,18 +3,27 @@
     <h1>Ele-Vue</h1>
     <el-button @click='setList'>111</el-button>
     <Table :layout='layout' :list='list'>
-      <template #address="{scope}" >
-        {{scope.row.address}}
-      </template>
-      <template #operate="{scope}">
-        <el-button @click="handleScope(scope)">编辑</el-button>
+      <template #address='{scope}'>{{scope.row.address}}</template>
+      <template #operate='{scope}'>
+        <el-button @click='handleScope(scope)'>编辑</el-button>
       </template>
     </Table>
+    <Page
+      :total='page.total'
+      :pageSize='page.pageSize'
+      :currentPage='page.currentPage'
+      :sizeCb='handleSizeCb'
+      :pageCb='handlePageCb'
+    />
   </div>
 </template>
 <script>
+import Page from '../packages/Pagination/index';
 export default {
   name: 'app',
+  components: {
+    Page
+  },
   data() {
     return {
       layout: {
@@ -23,7 +32,7 @@ export default {
         index: true,
         stripe: true,
         operate: {
-          visible: true,
+          visible: true
         },
         props: [
           {
@@ -38,10 +47,11 @@ export default {
             attr: 'address',
             name: '地址',
             slot: 'address'
-          },
+          }
         ]
       },
-      list: [ {
+      list: [
+        {
           date: '2016-05-02',
           name: '王小虎',
           address: '上海市普陀区金沙江路 1518 弄'
@@ -60,18 +70,18 @@ export default {
           date: '2016-05-03',
           name: '王小虎',
           address: '上海市普陀区金沙江路 1516 弄'
-        }]
+        }
+      ],
+      page: {
+        total: 4,
+        currentPage: 1,
+        pageSize: 20
+      }
     };
   },
   methods: {
-    setList() {
-      this.list = [
-       
-      ];
-    },
-    handleScope(v) {
-      console.log(v)
-    }
+    handleSizeCb() {},
+    handlePageCb() {}
   }
 };
 </script>
