@@ -1,6 +1,6 @@
 // 导入颜色选择器组件
 import Table from './Table'
-import Page from './Pagination'
+import Page from './Page'
 
 // 存储组件列表
 const components = [

@@ -12,7 +12,7 @@
 </template>
 <script>
 export default {
-    name: 'Pagination',
+    name: 'Page',
     props:{
         layout: {
             type: String,
