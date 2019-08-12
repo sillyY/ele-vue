@@ -4,5 +4,5 @@
 - Page component
 - Modify Docs
 
-## [0.2.1]
+## [0.2.2]
 - fix page export bug
