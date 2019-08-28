@@ -25,6 +25,7 @@ npm install -s ele-vue
 ```
 indexMethod: Function // 自定义索引
 handleSelectionChange: Function // 多选选中
+isLoad: Boolean // 是否加载
 layout: {
   border: Booean, // 边框
   stripe: Booean, // 斑马纹

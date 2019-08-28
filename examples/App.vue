@@ -1,8 +1,7 @@
 <template>
   <div id='app'>
     <h1>Ele-Vue</h1>
-    <el-button @click='setList'>111</el-button>
-    <Table :layout='layout' :list='list'>
+    <Table :layout='layout' :list='list' >
       <template #address='{scope}'>{{scope.row.address}}</template>
       <template #operate='{scope}'>
         <el-button @click='handleScope(scope)'>编辑</el-button>
@@ -18,7 +17,7 @@
   </div>
 </template>
 <script>
-import Page from '../packages/Pagination/index';
+import Page from '../packages/Page/index';
 export default {
   name: 'app',
   components: {
