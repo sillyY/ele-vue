@@ -1,6 +1,6 @@
 {
   "name": "ele-vue",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "description": "基于 Element-UI 开发的小型组件库",
   "private": false,
   "main": "lib/ele-vue.umd.min.js",
@@ -13,9 +13,8 @@
     "start": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "lib": "vue-cli-service build --target lib --name ele-vue --dest lib packages/index.js",
-    "docs": "vuepress dev docs",
-    "deploy": ""
+    "lib": "vue-cli-service build --target lib --name eleVue --dest lib packages/index.js",
+    "docs": "vuepress dev docs"
   },
   "dependencies": {
     "core-js": "^2.6.5"

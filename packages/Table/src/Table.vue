@@ -56,8 +56,15 @@
   </el-table>
 </template>
 <script>
+import { Table, TableColumn, Row, Col } from "element-ui";
 export default {
   name: "Table",
+  components: {
+    ElTable: Table,
+    ElTableColumn: TableColumn,
+    ElRow: Row,
+    ElCol: Col
+  },
   props: {
     list: {
       type: Array,
@@ -69,7 +76,7 @@ export default {
     isLoad: {
       type: Boolean,
       default() {
-        return false
+        return false;
       }
     },
     pageSize: {
@@ -94,7 +101,7 @@ export default {
     indexMethod: {
       type: Function,
       default() {
-        return function(){} 
+        return function() {};
       }
     }
   },

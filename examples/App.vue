@@ -17,12 +17,9 @@
   </div>
 </template>
 <script>
-import Page from '../packages/Page/index';
+import { Page} from '../packages/Page/index.js';
 export default {
   name: 'app',
-  components: {
-    Page
-  },
   data() {
     return {
       layout: {
