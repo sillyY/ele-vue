@@ -6,8 +6,8 @@
     :stripe="layout.stripe"
     :row-class-name="layout.rowClassName"
     :style="layout.style"
-    height="layout.height"
-    max-height="layout.maxHeight"
+    :height="layout.height"
+    :max-height="layout.maxHeight"
     @selection-change="handleSelectionChange"
     :size="layout.size?layout.size: 'medium'"
   >
@@ -56,14 +56,13 @@
   </el-table>
 </template>
 <script>
-import { Table, TableColumn, Row, Col } from "element-ui";
+import { Table, TableColumn, Row } from "element-ui";
 export default {
   name: "Table",
   components: {
     ElTable: Table,
     ElTableColumn: TableColumn,
-    ElRow: Row,
-    ElCol: Col
+    ElRow: Row
   },
   props: {
     list: {

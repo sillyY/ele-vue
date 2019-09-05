@@ -17,7 +17,6 @@
   </div>
 </template>
 <script>
-import { Page} from '../packages/Page/index.js';
 export default {
   name: 'app',
   data() {
