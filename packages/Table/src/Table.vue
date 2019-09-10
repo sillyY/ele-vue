@@ -4,7 +4,7 @@
     :data="list"
     :border="layout.border"
     :stripe="layout.stripe"
-    :row-class-name="layout.rowClassName"
+    :row-class-name="tableRowClassName"
     :style="layout.style"
     :height="layout.height"
     :max-height="layout.maxHeight"
@@ -101,6 +101,12 @@ export default {
       type: Function,
       default() {
         return function() {};
+      }
+    },
+    tableRowClassName: {
+      type: Function,
+      default() {
+        return function() {}
       }
     }
   },

@@ -16,3 +16,6 @@
 
 ## [0.2.8]
 - fix table height bug
+
+## [0.2.9]
+- 修复Table组件 带状态表格 bug
