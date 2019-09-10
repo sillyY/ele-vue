@@ -16,7 +16,7 @@
     <!-- index -->
     <el-table-column
       type="index"
-      :indexMethod="indexMethod"
+      :index="indexMethod"
       label="序号"
       align="center"
       width="80px"
