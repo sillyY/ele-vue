@@ -18,4 +18,4 @@
 - fix table height bug
 
 ## [0.2.9]
-- 修复Table组件 带状态表格 bug
+- fix Table row-class-name bug
