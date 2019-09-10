@@ -1,24 +1,24 @@
 <template>
-  <div id='app'>
+  <div id="app">
     <h1>Ele-Vue</h1>
-    <Table :layout='layout' :list='list' >
-      <template #address='{scope}'>{{scope.row.address}}</template>
-      <template #operate='{scope}'>
-        <el-button @click='handleScope(scope)'>编辑</el-button>
+    <Table :layout="layout" :list="list" :indexMethod="indexMethod">
+      <template #address="{scope}">{{scope.row.address}}</template>
+      <template #operate="{scope}">
+        <el-button @click="handleScope(scope)">编辑</el-button>
       </template>
     </Table>
     <Page
-      :total='page.total'
-      :pageSize='page.pageSize'
-      :currentPage='page.currentPage'
-      :sizeCb='handleSizeCb'
-      :pageCb='handlePageCb'
+      :total="page.total"
+      :pageSize="page.pageSize"
+      :currentPage="page.currentPage"
+      :sizeCb="handleSizeCb"
+      :pageCb="handlePageCb"
     />
   </div>
 </template>
 <script>
 export default {
-  name: 'app',
+  name: "app",
   data() {
     return {
       layout: {
@@ -31,40 +31,40 @@ export default {
         },
         props: [
           {
-            attr: 'date',
-            name: '日期'
+            attr: "date",
+            name: "日期"
           },
           {
-            attr: 'name',
-            name: '姓名'
+            attr: "name",
+            name: "姓名"
           },
           {
-            attr: 'address',
-            name: '地址',
-            slot: 'address'
+            attr: "address",
+            name: "地址",
+            slot: "address"
           }
         ]
       },
       list: [
         {
-          date: '2016-05-02',
-          name: '王小虎',
-          address: '上海市普陀区金沙江路 1518 弄'
+          date: "2016-05-02",
+          name: "王小虎",
+          address: "上海市普陀区金沙江路 1518 弄"
         },
         {
-          date: '2016-05-04',
-          name: '王小虎',
-          address: '上海市普陀区金沙江路 1517 弄'
+          date: "2016-05-04",
+          name: "王小虎",
+          address: "上海市普陀区金沙江路 1517 弄"
         },
         {
-          date: '2016-05-01',
-          name: '王小虎',
-          address: '上海市普陀区金沙江路 1519 弄'
+          date: "2016-05-01",
+          name: "王小虎",
+          address: "上海市普陀区金沙江路 1519 弄"
         },
         {
-          date: '2016-05-03',
-          name: '王小虎',
-          address: '上海市普陀区金沙江路 1516 弄'
+          date: "2016-05-03",
+          name: "王小虎",
+          address: "上海市普陀区金沙江路 1516 弄"
         }
       ],
       page: {
@@ -76,7 +76,10 @@ export default {
   },
   methods: {
     handleSizeCb() {},
-    handlePageCb() {}
+    handlePageCb() {},
+    indexMethod(index) {
+      return index * 2;
+    }
   }
 };
 </script>
@@ -84,7 +87,7 @@ export default {
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;

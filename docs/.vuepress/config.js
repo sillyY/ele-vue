@@ -90,7 +90,7 @@ module.exports = {
       [
         'script',
         {
-          src: 'https://cdn.jsdelivr.net/npm/ele-vue@0.2.8/lib/ele-vue.umd.min.js'
+          src: 'https://cdn.jsdelivr.net/npm/ele-vue@0.2.9/lib/ele-vue.umd.min.js'
         }
       ],
       [
