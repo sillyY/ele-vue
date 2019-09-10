@@ -4,7 +4,7 @@
     :data="list"
     :border="layout.border"
     :stripe="layout.stripe"
-    :row-class-name="layout.rowClassName"
+    :row-class-name="tableRowClassName"
     :style="layout.style"
     :height="layout.height"
     :max-height="layout.maxHeight"
@@ -16,7 +16,7 @@
     <!-- index -->
     <el-table-column
       type="index"
-      :indexMethod="indexMethod"
+      :index="indexMethod"
       label="序号"
       align="center"
       width="80px"
@@ -101,6 +101,12 @@ export default {
       type: Function,
       default() {
         return function() {};
+      }
+    },
+    tableRowClassName: {
+      type: Function,
+      default() {
+        return function() {}
       }
     }
   },

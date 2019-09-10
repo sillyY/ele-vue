@@ -23,9 +23,7 @@ export default {
     return {
       layout: {
         border: true,
-        select: true,
         index: true,
-        stripe: true,
         operate: {
           visible: true
         },
@@ -104,5 +102,12 @@ export default {
 
 #nav a.router-link-exact-active {
   color: #42b983;
+}
+.el-table .warning-row {
+  background: oldlace;
+}
+
+.el-table .success-row {
+  background: #f0f9eb;
 }
 </style>
