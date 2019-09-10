@@ -99,6 +99,7 @@ pageCb: Function // currentPage 改变时会触发
 ```
 
 ## Next to do
+- Docs‼
 - Upload
 - Download
 - QRCode
