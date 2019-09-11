@@ -67,7 +67,7 @@ module.exports = {
               {
                 title: '组件',
                 collapsable: false,
-                children: ['Table表格']
+                children: ['Table表格', 'Page分页']
               }
             ],
             '/zh/todo/': [

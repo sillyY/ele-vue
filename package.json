@@ -14,7 +14,9 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "lib": "vue-cli-service build --target lib --name ele-vue --dest lib packages/index.js",
-    "docs": "vuepress dev docs"
+    "docs": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
+    "deploy": "sh deploy.sh"
   },
   "dependencies": {
     "core-js": "^2.6.5"

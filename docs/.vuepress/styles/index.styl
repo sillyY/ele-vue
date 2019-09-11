@@ -8,6 +8,34 @@
     }
 }
 
+
+details summary {
+  user-select: none;
+  outline: 0 !important;
+  cursor: pointer;
+}
+
+details summary + p {
+    padding-left: 1.15em;
+}
+
+details summary:focus {
+    outline: none;
+}
+
+details summary.single-line {
+    cursor: default;
+}
+
+details summary.single-line + p {
+    display: none;
+}
+
+/*Chrome*/
+details summary.single-line::-webkit-details-marker {
+    visibility: hidden;
+}
+
 .el-table {
   position: relative;
   overflow: hidden;

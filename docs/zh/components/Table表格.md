@@ -2,7 +2,7 @@
 
 用于展示多条结构类似的数据，可对数据进行排序、筛选、对比或其他自定义操作。
 
-> 未完全实现Element所有特性,只适用于常见表格
+> 未完全实现Element所有特性, 提高常见表格开发效率.
 
 ## 基本表格
 
@@ -486,15 +486,34 @@
 ## 属性
 ### Table 属性
 | 参数     | 说明       | 类型      | 可选值        | 默认值   |
-|--------|----------|---------|------------|-------|
+|--------|----------|-----|------------|-------|
 | list   | 显示的数据    | array   | -          | -     |
 | layout | 表格参数     | object  | -          | -     |
 | isLoad | 是否显示加载动画 | boolean | true/false | false |
+| indexMethod | 自定义索引函数 | Funciton(index) | - | - |
+| tableRowClassName | 行的 className 的回调方法,也可以使用字符串为所有行设置一个固定的 className。 | Function({row, rowIndex})/String | - | - |
 
 ### Table 事件
 | 事件名                 | 说明                   | 参数 |
 |-----------------------|-----------------------|------|
 | handleSelectionChange | 当选择项发生变化时会触发该事件 | - |
-| indexMethod | 自定义索引函数 | - | 
 
+### layout 属性
+| 参数     | 说明       | 类型      | 可选值        | 默认值   |
+|--------|----------|---------|------------|-------|
+| style | style样式 | string | - | - |
+| height | Table的高度 | string/number | - | - |
+| maxHeight | Table的最大高度 | string/number | - | - |
+| size | Table的尺寸 | string | medium/small/mini | medium|
+| border | 是否显示边框 | boolean | true/false | false |
+| stripe | 是否为斑马纹 | boolean | true/false | false |
+| select | 是否显示选择 | boolean | true/false | false |
+| index | 是否显示索引 | boolean | true/false | false | 
+| operate | 操作区设置 | object | - | -|
+
+### operate 属性
+| 参数     | 说明       | 类型      | 可选值        | 默认值   |
+|--------|----------|---------|------------|-------|
+| visible | 是否显示操作区 | boolean | true/false | false | 
+| width | 操作区宽度 | string/number | - | 100 |
 
