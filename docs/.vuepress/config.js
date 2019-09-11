@@ -2,13 +2,13 @@ module.exports = {
     locales: {
       '/': {
         lang: 'en-US',
-        title: 'Ele-Vue',
-        description: 'Help you use Element faster and more conveniently'
+        title: 'ELE-VUE',
+        description: 'Help you use Element comfortably'
       },
       '/zh/': {
         lang: 'zh-CN',
-        title: 'Ele-Vue',
-        description: '帮你更快, 更便利的使用Element'
+        title: 'ELE-VUE',
+        description: '基于Element的开发助手'
       }
     },
     themeConfig: {
@@ -23,11 +23,32 @@ module.exports = {
           lastUpdated: 'Last Updated',
           nav: [
             {
+
+              text: '⬆Guide',
+              link: '/guide/'
+            },
+            {
+              text: '📏Components',
+              link: '/components/'
+            },
+            {
               text: '💪Todo',
               link: '/todo/'
             },
           ],
           sidebar: {
+            '/guide/': [{
+              title: 'Guide',
+              collapsable: false,
+              children: ['', 'update-log']
+            }],
+            '/components/': [
+              {
+                title: 'Components',
+                collapsable: false,
+                children: ['Table', 'Page']
+              }
+            ],
             '/todo/': [
               {
                 title: 'Next to do',
@@ -35,7 +56,6 @@ module.exports = {
                 children: ['']
               }
             ],
-            // '/': genSidebarConfig('Guide')
           }
         },
         '/zh/': {
