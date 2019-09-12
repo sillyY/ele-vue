@@ -3,7 +3,7 @@ home: true
 title: Blogging Like a Hacker
 heroImage: /logo.png
 actionText: ELE VUE →  
-actionLink: /zh/guide/
+actionLink: /guide/
 features:
 - title: Simple
   details: Pursuit of simplicity, pursuit of streamlining
